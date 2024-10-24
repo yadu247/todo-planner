@@ -1,0 +1,174 @@
+.todo {
+  width: 80%;
+  height: fit-content;
+  margin: 10px;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #222222;
+  transition-property: color;
+  transition-duration: 0.7s;
+  transition-timing-function: ease-in-out;
+}
+.todo-completed {
+  background-color: #ceff46bd;
+  color: #ffffff;
+}
+.todo input {
+  width: 30px;
+  height: 15px;
+}
+.todo p {
+  display: inline;
+  font-size: 17px;
+}
+.deadline {
+  position: absolute;
+  left: 50%;
+  color: #353535b1;
+  font-size: 13px !important;
+}
+.deadline i {
+  margin-right: 5px;
+}
+.priority-symbol {
+  width: 20px;
+  height: 20px;
+  display: inline;
+  border-radius: 5px;
+  position: absolute;
+  right: 95px;
+}
+.delete-btn-completed {
+  border: 2px solid #ffffff;
+  background-color: #ffffff;
+  color: #222222;
+  padding: 7px;
+  position: absolute;
+  right: 15px;
+  border-radius: 5px;
+}
+.delete-btn-completed:hover {
+  background: none;
+  color: #ffffff;
+}
+.delete-btn-not-completed {
+  background-color: #353535;
+  border: 1px solid #353535;
+  color: #ffffff;
+}
+.delete-btn-not-completed:hover {
+  color: #222222;
+}
+.edit-btn {
+  border: 1px solid #353535;
+  background-color: #353535;
+  color: #ffffff;
+  padding: 7px;
+  position: absolute;
+  right: 55px;
+  border-radius: 5px;
+}
+.edit-btn:hover {
+  color: #222222;
+  background: none;
+}
+/* grid view */
+.todo-grid {
+  width: 20%;
+  height: 125px;
+  margin: 15px;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #222222;
+  transition-property: color;
+  transition-duration: 0.7s;
+  transition-timing-function: ease-in-out;
+}
+.todo-completed-grid {
+  background-color: #ceff46bd;
+  color: #ffffff;
+}
+.todo-grid input {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 15%;
+  left: 11%;
+}
+.todo-grid p {
+  display: inline;
+  font-size: 17px;
+  position: absolute;
+  top: 27%;
+  left: 11%;
+}
+.priority-symbol-grid {
+  width: 20px;
+  height: 20px;
+  display: inline;
+  border-radius: 5px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.delete-btn-completed-grid {
+  border: 2px solid #ffffff;
+  background-color: #ffffff;
+  color: #222222;
+  padding: 5px;
+  position: absolute;
+  right: 10%;
+  bottom: 5%;
+  border-radius: 5px;
+}
+.delete-btn-completed-grid:hover {
+  background: none;
+  color: #ffffff;
+}
+.delete-btn-not-completed-grid {
+  background-color: #353535;
+  border: 1px solid #353535;
+  color: #ffffff;
+}
+.delete-btn-not-completed-grid:hover {
+  color: #222222;
+}
+.edit-btn-grid {
+  border: 1px solid #353535;
+  background-color: #353535;
+  color: #ffffff;
+  padding: 5px;
+  position: absolute;
+  left: 10%;
+  bottom: 5%;
+  border-radius: 5px;
+}
+.edit-btn-grid:hover {
+  color: #222222;
+  background: none;
+}
+@media (width < 720px) {
+  .deadline {
+    left: 40%;
+  }
+}
+@media (width < 530px) {
+  .deadline {
+    left: 30%;
+  }
+}
+@media (width < 450px) {
+  .deadline {
+    left: 32%;
+    font-size: 9px !important;
+  }
+}

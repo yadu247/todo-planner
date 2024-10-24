@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #222222;
+}
+h1 {
+  text-align: center;
+  margin: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+}
+.container {
+  width: 70%;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #cfff46;
+  border-radius: 20px;
+  margin: 20px auto;
+  padding-bottom: 20px;
+  background-color: #1d1d1d;
+  position: relative;
+}
+.create-todo {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+input[type='text'] {
+  width: 100%;
+  height: 25px;
+  font-size: 15px;
+  padding: 5px 10px;
+  border-radius: 15px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  background-color: #353535;
+}
+input[type='text']:focus {
+  outline: none;
+}
+.create-todo button {
+  width: 40px;
+  height: 35px;
+  padding: 0 10px;
+  font-size: 25px;
+  border-radius: 15px;
+  background-color: #353535;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
+.create-modal {
+  color: #cfff46;
+}
+.create-modal label {
+  color: #1d1d1d;
+  margin-left: 5px;
+}
+.create-modal input[type='text'] {
+  width: 95%;
+  height: 25px;
+  font-size: 15px;
+  padding: 4px 10px;
+  border-radius: 10px;
+  border: 1px solid #353535;
+  color: #353535;
+  background: none;
+  margin: 7px 0;
+}
+.create-modal input[type='text']:focus {
+  outline: none;
+}
+.create-todo button:hover {
+  background: none;
+}
+.priority-dropdown {
+  margin: 8px 0 0 0;
+}
+.create-modal p {
+  display: inline;
+  color: #1d1d1d;
+  margin: 5px;
+}
+.deadline-picker {
+  display: block !important;
+  margin: 20px 0 0 0 !important;
+}
+.MuiFormLabel-root {
+  color: #222222 !important;
+}
+.MuiInputBase-input {
+  margin: 10px 5px !important;
+}
+.gridview-btn {
+  position: absolute;
+  right: 4.5%;
+  top: 120px;
+  font-size: 25px;
+  color: #ffffff;
+  border: none;
+  background: none;
+}
+.gridview-btn:hover {
+  transform: scale(1.1);
+}
+.gridview-btn:active {
+  transform: scale(1.2);
+}
+.line-break {
+  width: 100%;
+  height: 2px;
+  background-color: #cfff46;
+  margin: 15px 0;
+}
+.sort-todo {
+  display: flex;
+  justify-content: end;
+  width: 60%;
+  gap: 5px;
+  margin: 5px;
+  color: #ffffff;
+}
+.sort-todo p {
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.sort-todo p:hover {
+  background-color: #353535;
+}
+.sort-todo-options {
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #ffffff;
+}
+.sort-todo-options:hover {
+  background-color: #353535;
+}
+.sort-todo-options-selected {
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #cfff46;
+  background-color: #cfff46;
+  color: #222222;
+}
+.sort-todo-options-selected:hover {
+  color: #ffffff;
+}
+.todo-container {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.empty-todo-message {
+  position: absolute;
+  color: #ffffff8d;
+  top: 55%;
+}
+.edit-modal {
+  color: #cfff46;
+}
+.edit-modal input[type='text'] {
+  width: 95%;
+  height: 25px;
+  font-size: 15px;
+  padding: 4px 10px;
+  border-radius: 10px;
+  border: 1px solid #353535;
+  color: #353535;
+  background: none;
+  margin: 7px 0;
+}
+.edit-modal input[type='text']:focus {
+  outline: none;
+}
+.ant-btn {
+  background-color: #222222;
+}
+.ant-btn-primary:hover {
+  border: 1px solid #1d1d1d;
+  background: none !important;
+  color: #1d1d1d !important;
+}
+.ant-btn-default {
+  color: #ffffff;
+}
+.ant-btn-default:hover {
+  border: 1px solid #1d1d1d !important;
+  background: none !important;
+  color: #1d1d1d !important;
+}
+.edit-modal p {
+  display: inline;
+  color: #1d1d1d;
+  margin: 5px;
+}
+.delete-toast {
+  color: #ffffff;
+}
+.Toastify__toast-icon {
+  display: none;
+}
+.Toastify__progress-bar {
+  background-color: #ffffff;
+}
+.Toastify__progress-bar--bg {
+  background-color: #ffffff;
+}
+@media (width < 900px) {
+  .create-todo {
+    width: 60%;
+  }
+  .container {
+    width: 85%;
+  }
+}
+@media (width < 650px) {
+  .create-todo {
+    width: 80%;
+  }
+  .todo-container {
+    width: 100%;
+  }
+  .sort-todo {
+    justify-content: center;
+  }
+}
