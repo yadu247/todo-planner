@@ -215,6 +215,9 @@ input[type='text']:focus {
 .Toastify__progress-bar--bg {
   background-color: #ffffff;
 }
+
+/* Media queries */
+
 @media (width < 900px) {
   .create-todo {
     width: 60%;

@@ -76,7 +76,9 @@
   color: #222222;
   background: none;
 }
+
 /* grid view */
+
 .todo-grid {
   width: 20%;
   height: 125px;
@@ -156,6 +158,9 @@
   color: #222222;
   background: none;
 }
+
+/* Media queries */
+
 @media (width < 720px) {
   .deadline {
     left: 40%;

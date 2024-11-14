@@ -9,18 +9,23 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import dayjs from 'dayjs';
+
 import './App.css';
+
 const App = () => {
   const [todos, setTodos] = useState([]);
+
   const [inputValue, setInputValue] = useState({
     value: '',
     priority: 'low',
     deadline: '',
   });
+
   const [todoSort, setTodoSort] = useState('all');
   const [gridview, setGridview] = useState(false);
   const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+
   const [editDetails, setEditDetails] = useState({
     id: '',
     value: '',
@@ -28,7 +33,9 @@ const App = () => {
     priority: '',
     deadline: '',
   });
+
   const createBtnRef = useRef();
+
   const onCreateClick = () => {
     if (inputValue.value != '') setIsCreateModalOpen(true);
   };
@@ -60,6 +67,7 @@ const App = () => {
       deadline: '',
     });
   };
+
   const onClickEnter = e => {
     if (e.key == 'Enter') createBtnRef.current.click();
   };
@@ -81,6 +89,7 @@ const App = () => {
       icon: <UserOutlined />,
     },
   ];
+
   const handleMenuClick = e => {
     setInputValue({ ...inputValue, priority: e.key ? e.key : 'low' });
   };
@@ -95,6 +104,7 @@ const App = () => {
     items,
     onClick: handleMenuClickEdit,
   };
+
   const onCheck = (e, id) => {
     const todoCopy = [...todos];
     let index = 0;
@@ -106,6 +116,7 @@ const App = () => {
     todoCopy[index].completed = e.target.checked;
     setTodos(todoCopy);
   };
+
   const showEditModal = (id, data, priority, deadline) => {
     setIsEditModalOpen(true);
     setEditDetails({
@@ -134,6 +145,7 @@ const App = () => {
     setIsEditModalOpen(false);
     setEditDetails({ id: '', value: '', data: '', priority: '', deadline: '' });
   };
+
   const onDeleteClick = id => {
     const todoCopy = [...todos];
     let index = 0;
@@ -153,6 +165,7 @@ const App = () => {
       className: 'delete-toast',
     });
   };
+
   const clickAll = () => {
     setTodoSort('all');
   };
@@ -162,6 +175,7 @@ const App = () => {
   const clickPending = () => {
     setTodoSort('pending');
   };
+
   const onTodoSortClicked = () => {
     if (todoSort == 'all') return todos;
     else if (todoSort == 'completed')
@@ -186,6 +200,7 @@ const App = () => {
             +
           </button>
         </div>
+
         <Modal
           className="create-modal"
           title="Create Todo"
@@ -202,6 +217,7 @@ const App = () => {
               setInputValue({ ...inputValue, value: e.target.value });
             }}
           ></input>
+
           <Dropdown className="priority-dropdown" menu={menuProps}>
             <Button>
               <Space>
@@ -211,6 +227,7 @@ const App = () => {
             </Button>
           </Dropdown>
           <p>{inputValue.priority}</p>
+
           <LocalizationProvider dateAdapter={AdapterDayjs}>
             <DatePicker
               value={inputValue.deadline ? dayjs(inputValue.deadline) : dayjs()}
@@ -224,6 +241,7 @@ const App = () => {
             />
           </LocalizationProvider>
         </Modal>
+
         <button
           onClick={() => {
             setGridview(!gridview);
@@ -265,6 +283,7 @@ const App = () => {
             Pending
           </p>
         </div>
+
         <div className="todo-container">
           {todos.length == 0 ? (
             <p className="empty-todo-message">No data to display</p>
@@ -288,6 +307,7 @@ const App = () => {
             )
           )}
         </div>
+
         <Modal
           className="edit-modal"
           title="Edit Todo"
@@ -302,6 +322,7 @@ const App = () => {
               setEditDetails({ ...editDetails, value: e.target.value });
             }}
           ></input>
+
           <Dropdown className="priority-dropdown" menu={menuPropsEdit}>
             <Button>
               <Space>
